@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# This is the Mumm-Ra script!
+# Get ready to turn you machine into an awesome development one.
+# Based on thoughtbot's awesome https://github.com/thoughtbot/laptop.
+
+# The Incantation
+echo
+echo 'Ancient Spirits of Evil...'
+echo "Transform $(hostname -s)'s decayed form..."
+echo 'To Mumm-Ra, the Ever-living development machine!'
+echo
+
+read -r -s -p 'Ok Ok, press any key to continue...' -n1 key
+echo
