@@ -40,3 +40,19 @@ for formula in "${formulae[@]}"; do
   brew install "${formula}" >/dev/null 2>&1
   echo ' done.'
 done
+
+
+# Run local customizations, if any
+customizations="${HOME}/.mumm-ra.local"
+
+echo
+
+if [[ -f "${customizations}" ]]; then
+  echo "Now running your customizations from ${customizations}..."
+  . "${customizations}"
+  echo ' done.'
+fi
+
+echo
+echo 'All good, enjoy!'
+exit 0
