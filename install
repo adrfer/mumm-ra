@@ -11,5 +11,32 @@ echo "Transform $(hostname -s)'s decayed form..."
 echo 'To Mumm-Ra, the Ever-living development machine!'
 echo
 
-read -r -s -p 'Ok Ok, press any key to continue...' -n1 key
+read -r -s -p 'When ready, press any key to continue...' -n1 key
 echo
+echo
+
+# Setting up Homebrew
+if ! command -v 'brew' >/dev/null 2>&1; then
+  echo -n 'Installing Homebrew...'
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null 2>&1
+else
+  echo -n 'Homebrew is already installed. Updating it...'
+  brew update >/dev/null 2>&1
+fi
+
+echo ' done.'
+echo
+
+formulae=( 'tree' 'wget' 'unrar' 'rbenv' 'ruby-build' 'shellcheck' )
+
+for formula in "${formulae[@]}"; do
+
+  if ! command -v "${formula}" >/dev/null 2>&1; then
+    echo -n "Installing ${formula}..."
+  else
+    echo -n "Updating ${formula}..."
+  fi
+
+  brew install "${formula}" >/dev/null 2>&1
+  echo ' done.'
+done
