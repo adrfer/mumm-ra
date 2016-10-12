@@ -67,6 +67,30 @@ rbenv shell "${latest_ruby_version}" >/dev/null 2>&1
 echo ' done.'
 echo
 
+echo -n 'Updating RubyGems...'
+gem update --system --silent
+echo ' done.'
+echo
+
+gems=( 'bundler' )
+
+for gem in "${gems[@]}"; do
+
+  if gem list "${gem}" --no-installed >/dev/null 2>&1; then
+    echo -n "Installing ${gem}..."
+    gem install --no-document --silent "${gem}"
+    rbenv rehash
+  else
+    echo -n "Updating ${gem}..."
+    gem update --no-document --silent "${gem}"
+  fi
+
+  echo ' done.'
+done
+
+number_of_cores="$(sysctl -n hw.ncpu)"
+bundle config --global jobs "$((number_of_cores - 1))"
+
 # Run local customizations, if any
 customizations="${HOME}/.mumm-ra.local"
 
