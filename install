@@ -11,7 +11,7 @@ echo "Transform $(hostname -s)'s decayed form..."
 echo 'To Mumm-Ra, the Ever-living development machine!'
 echo
 
-read -r -s -p 'When ready, press any key to continue...' -n1 key
+read -r -s -n1 -p 'When ready, press any key to continue...'
 echo
 echo
 
