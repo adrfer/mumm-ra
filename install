@@ -55,7 +55,7 @@ echo -n 'Configuring rbenv...'
 
 bash_profile="${HOME}/.bash_profile"
 
-if [ ! -f "${bash_profile}" ]; then
+if [[ ! -f "${bash_profile}" ]]; then
   touch "${bash_profile}"
 fi
 
