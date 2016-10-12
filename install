@@ -45,11 +45,9 @@ echo
 
 # Setting up Ruby-related stuff
 latest_ruby_version="$(rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//')"
-# TODO: Check if current version is the latest one, if so skip installation
-# current_ruby_version="$(rbenv version | cut -d ' ' -f 1 | sed -e 's/^ *//')"
 
 echo -n "Installing ruby ${latest_ruby_version}..."
-rbenv install "${latest_ruby_version}" >/dev/null 2>&1
+rbenv install -s "${latest_ruby_version}" >/dev/null 2>&1
 echo ' done.'
 echo
 
