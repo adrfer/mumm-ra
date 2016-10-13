@@ -6,7 +6,7 @@
 
 # The Incantation
 echo
-echo 'Ancient Spirits of Evil...'
+echo 'Ancient spirits of evil...'
 echo "Transform $(hostname -s)'s decayed form..."
 echo 'To Mumm-Ra, the Ever-living development machine!'
 echo
