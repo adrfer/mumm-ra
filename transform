@@ -68,7 +68,7 @@ echo ' done.'
 echo
 
 echo -n 'Updating RubyGems...'
-gem update --system --silent
+gem update --system --no-document --silent
 echo ' done.'
 echo
 
