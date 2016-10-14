@@ -12,7 +12,7 @@ Tested on `GNU bash 3.2.57` and `Git 2.8.4`.
 
 Open a terminal and run:
 
-    bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform) && . ~/.bash_profile
+    bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform)
 
 Feel free to review and modify the script to your needs!
 
