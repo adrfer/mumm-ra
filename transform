@@ -20,7 +20,7 @@ if ! command -v 'brew' >/dev/null 2>&1; then
   echo -n 'Installing Homebrew...'
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null 2>&1
 else
-  echo -n 'Homebrew is already installed. Updating it...'
+  echo -n 'Updating Homebrew...'
   brew update >/dev/null 2>&1
 fi
 
