@@ -85,11 +85,11 @@ for gem in "${gems[@]}"; do
 
   if gem list "${gem}" --no-installed >/dev/null 2>&1; then
     echo -n "Installing ${gem}..."
-    gem install --no-document --quiet "${gem}"
+    gem install --no-document --silent "${gem}"
     rbenv rehash
   else
     echo -n "Updating ${gem}..."
-    gem update --no-document --quiet "${gem}"
+    gem update --no-document --silent "${gem}"
   fi
 
   echo ' done.'
