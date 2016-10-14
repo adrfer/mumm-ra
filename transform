@@ -16,11 +16,10 @@ echo
 echo
 
 # Setting up Homebrew
+echo -n 'Setting up homebrew...'
 if ! command -v 'brew' >/dev/null 2>&1; then
-  echo -n 'Installing Homebrew...'
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null 2>&1
 else
-  echo -n 'Updating Homebrew...'
   brew update >/dev/null 2>&1
 fi
 
@@ -30,13 +29,7 @@ echo
 formulae=( 'tree' 'wget' 'unrar' 'rbenv' 'ruby-build' 'shellcheck' )
 
 for formula in "${formulae[@]}"; do
-
-  if ! command -v "${formula}" >/dev/null 2>&1; then
-    echo -n "Installing ${formula}..."
-  else
-    echo -n "Updating ${formula}..."
-  fi
-
+  echo -n "Setting up ${formula}..."
   brew install "${formula}" >/dev/null 2>&1
   echo ' done.'
 done
@@ -46,14 +39,14 @@ echo
 # Setting up Ruby-related stuff
 latest_ruby_version="$(rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//')"
 
-echo -n "Installing ruby ${latest_ruby_version}..."
+echo -n "Setting up ruby ${latest_ruby_version}..."
 if ! rbenv versions | grep -Fq "${latest_ruby_version}"; then
   rbenv install -s "${latest_ruby_version}" >/dev/null 2>&1
 fi
 echo ' done.'
 echo
 
-echo -n 'Configuring rbenv...'
+echo -n 'Setting up rbenv...'
 
 bash_profile="${HOME}/.bash_profile"
 rbenv_integration='eval "$(rbenv init -)"'
@@ -74,7 +67,7 @@ rbenv shell "${latest_ruby_version}" >/dev/null 2>&1
 echo ' done.'
 echo
 
-echo -n 'Updating RubyGems...'
+echo -n 'Setting up rubygems...'
 gem update --system --no-document --silent
 echo ' done.'
 echo
@@ -83,12 +76,11 @@ gems=( 'bundler' )
 
 for gem in "${gems[@]}"; do
 
+  echo -n "Setting up ${gem}..."
   if gem list "${gem}" --no-installed >/dev/null 2>&1; then
-    echo -n "Installing ${gem}..."
     gem install --no-document --silent "${gem}"
     rbenv rehash
   else
-    echo -n "Updating ${gem}..."
     gem update --no-document --silent "${gem}"
   fi
 
