@@ -47,20 +47,27 @@ echo
 latest_ruby_version="$(rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//')"
 
 echo -n "Installing ruby ${latest_ruby_version}..."
-rbenv install -s "${latest_ruby_version}" >/dev/null 2>&1
+if ! rbenv versions | grep -Fq "${latest_ruby_version}"; then
+  rbenv install -s "${latest_ruby_version}" >/dev/null 2>&1
+fi
 echo ' done.'
 echo
 
 echo -n 'Configuring rbenv...'
 
 bash_profile="${HOME}/.bash_profile"
+rbenv_integration='eval "$(rbenv init -)"'
 
 if [[ ! -f "${bash_profile}" ]]; then
   touch "${bash_profile}"
 fi
 
-echo "" >> "${bash_profile}"
-echo 'eval "$(rbenv init -)"' >> "${bash_profile}"
+if ! grep -Fqs "${rbenv_integration}" "${bash_profile}"; then
+  echo "" >> "${bash_profile}"
+  echo "${rbenv_integration}" >> "${bash_profile}"
+fi
+
+eval "$(rbenv init -)"
 
 rbenv global "${latest_ruby_version}" >/dev/null 2>&1
 rbenv shell "${latest_ruby_version}" >/dev/null 2>&1
