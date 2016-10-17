@@ -14,7 +14,7 @@ Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform)
 
-Feel free to review and modify the script to your needs!
+Feel free to review and modify the `transform` script to better suit your needs!
 
 ## Customize in ~/.mumm-ra.local
 
