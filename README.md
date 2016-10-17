@@ -16,6 +16,37 @@ Open a terminal and run:
 
 Feel free to review and modify the script to your needs!
 
+## Customize in ~/.mumm-ra.local
+
+Mumm-ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
+
+Here's an example:
+
+```sh
+#!/usr/bin/env bash
+
+# Clone files and/or directories
+clone() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: clone WHATEVER'
+    return 1
+  }
+
+  cp -rf ${1%/}{," copy $(date +%s)"}
+}
+
+# Jump to a directory, create it if it doesn't exist
+jump() {
+  [[ "${#}" = 1 ]] || {
+    echo 'Usage: jump PATH'
+    return 1
+  }
+
+  [[ -n "${1}" ]] && mkdir -p "${1}" && echo "Created ${1}."
+  cd "${1}"
+}
+```
+
 --
 Hey, looking for some bash badassery? Check out [bash-oh-my](https://github.com/adrfer/bash-oh-my).
 
