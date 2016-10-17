@@ -7,16 +7,32 @@ Tested on `GNU bash 3.2.57` and `Git 2.8.4`.
 
 **Note:** Mumm-Ra can be run as many times as needed on the same machine safely. Installs, upgrades, and/or skips are based on what is already installed on the machine. So, no worries!
 
-
 ## Usage
 
 Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform)
 
-Feel free to review and modify the `transform` script to better suit your needs!
+## Customize
 
-## Customize in ~/.mumm-ra.local
+### The `transform` script
+
+Feel free to review and modify the `transform` script to better suit your needs.
+
+As default, the script sets up:
+
+- [homebrew](http://brew.sh)
+- [tree](http://mama.indstate.edu/users/ice/tree)
+- [wget](https://www.gnu.org/software/wget)
+- [unrar](http://www.rarlab.com)
+- [rbenv](https://github.com/sstephenson/rbenv)
+- [ruby-build](https://github.com/sstephenson/ruby-build)
+- [ruby](https://www.ruby-lang.org)
+- [shellcheck](http://www.shellcheck.net)
+- [rubygems](https://rubygems.org)
+- [bundler](http://bundler.io)
+
+### The ~/.mumm-ra.local file
 
 Mumm-ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
 
