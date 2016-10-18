@@ -32,7 +32,7 @@ As default, the script sets up:
 - [rubygems](https://rubygems.org)
 - [bundler](http://bundler.io)
 
-### The ~/.mumm-ra.local file
+### The `~/.mumm-ra.local` file
 
 Mumm-ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
 
