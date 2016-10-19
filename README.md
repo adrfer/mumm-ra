@@ -5,13 +5,13 @@ Mumm-Ra wouldn't exist if it wasn't for awesome prior art. It's been inspired by
 
 Tested on `GNU bash 3.2.57` and `Git 2.8.4`.
 
-**Note:** Mumm-Ra can be run as many times as needed on the same machine safely. Installs, upgrades, and/or skips are based on what is already setup. So, no worries!
-
 ## Usage
 
 Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform)
+
+Mumm-Ra can be run as many times as needed on the same machine safely. Installs, upgrades, and/or skips are based on what is already setup. So, no worries!
 
 ## Customize
 
