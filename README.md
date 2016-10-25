@@ -41,7 +41,7 @@ Here's an example:
 ```sh
 #!/usr/bin/env bash
 
-# Jump to a directory, create it if it doesn't exist
+# Jump to am existing directory or create it
 jump() {
   [[ "${#}" = 1 ]] || {
     echo 'Usage: jump PATH'
