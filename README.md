@@ -11,7 +11,7 @@ Open a terminal and run:
 
     bash <(curl -sL https://raw.github.com/adrfer/mumm-ra/master/transform)
 
-Mumm-Ra can be run as many times as needed on the same machine safely. Installs, upgrades, and/or skips are based on what is already setup. So, no worries!
+Mumm-Ra can be run as many times as needed on the same machine safely. Installs, upgrades, and/or skips are based on what's already setup. So, no worries!
 
 ## Customize
 
@@ -19,7 +19,7 @@ Mumm-Ra can be run as many times as needed on the same machine safely. Installs,
 
 Feel free to review and modify the `transform` script to better suit your needs.
 
-As default, the script sets up:
+By default, the script sets up:
 
 - [homebrew](http://brew.sh)
 - [tree](http://mama.indstate.edu/users/ice/tree)
@@ -41,16 +41,6 @@ Here's an example:
 ```sh
 #!/usr/bin/env bash
 
-# Clone files and/or directories
-clone() {
-  [[ "${#}" = 1 ]] || {
-    echo 'Usage: clone WHATEVER'
-    return 1
-  }
-
-  cp -rf ${1%/}{," copy $(date +%s)"}
-}
-
 # Jump to a directory, create it if it doesn't exist
 jump() {
   [[ "${#}" = 1 ]] || {
@@ -58,8 +48,7 @@ jump() {
     return 1
   }
 
-  [[ -n "${1}" ]] && mkdir -p "${1}" && echo "Created ${1}."
-  cd "${1}"
+  [[ -n "${1}" ]] && mkdir -p "${1}" && cd "${1}"
 }
 ```
 
