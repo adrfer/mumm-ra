@@ -17,6 +17,7 @@ echo
 
 # Setting up Homebrew
 echo -n 'Setting up homebrew...'
+
 if ! command -v 'brew' >/dev/null 2>&1; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null 2>&1
 else
@@ -40,9 +41,11 @@ echo
 latest_ruby_version="$(rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//')"
 
 echo -n "Setting up ruby ${latest_ruby_version}..."
+
 if ! rbenv versions | grep -Fq "${latest_ruby_version}"; then
   rbenv install -s "${latest_ruby_version}" >/dev/null 2>&1
 fi
+
 echo ' done.'
 echo
 
@@ -56,7 +59,7 @@ if [[ ! -f "${bash_profile}" ]]; then
 fi
 
 if ! grep -Fqs "${rbenv_integration}" "${bash_profile}"; then
-  echo "" >> "${bash_profile}"
+  echo '' >> "${bash_profile}"
   echo "${rbenv_integration}" >> "${bash_profile}"
 fi
 
@@ -75,8 +78,8 @@ echo
 gems=( 'bundler' )
 
 for gem in "${gems[@]}"; do
-
   echo -n "Setting up ${gem}..."
+  
   if gem list "${gem}" --no-installed >/dev/null 2>&1; then
     gem install --no-document --silent "${gem}"
     rbenv rehash
