@@ -71,7 +71,7 @@ echo ' done.'
 echo
 
 echo -n 'Setting up rubygems...'
-gem update --system --no-document --silent
+gem update --system --no-document >/dev/null 2>&1
 echo ' done.'
 echo
 
