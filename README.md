@@ -22,6 +22,7 @@ By default, the script sets up:
 - [homebrew](http://brew.sh)
 - [tree](http://mama.indstate.edu/users/ice/tree)
 - [wget](https://www.gnu.org/software/wget)
+- [tmux](http://tmux.github.io)
 - [unrar](http://www.rarlab.com)
 - [rbenv](https://github.com/sstephenson/rbenv)
 - [ruby-build](https://github.com/sstephenson/ruby-build)
