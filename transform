@@ -27,7 +27,7 @@ fi
 echo ' done.'
 echo
 
-formulae=( 'tree' 'wget' 'unrar' 'rbenv' 'ruby-build' 'shellcheck' )
+formulae=( 'tree' 'wget' 'unrar' 'rbenv' 'ruby-build' 'shellcheck' 'tmux' )
 
 for formula in "${formulae[@]}"; do
   echo -n "Setting up ${formula}..."
