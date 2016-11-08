@@ -21,14 +21,14 @@ By default, the script sets up:
 
 - [homebrew](http://brew.sh)
 - [tree](http://mama.indstate.edu/users/ice/tree)
-- [wget](https://www.gnu.org/software/wget)
+- [wget](http://www.gnu.org/software/wget)
 - [tmux](http://tmux.github.io)
 - [unrar](http://www.rarlab.com)
-- [rbenv](https://github.com/sstephenson/rbenv)
+- [rbenv](http://github.com/sstephenson/rbenv)
 - [ruby-build](https://github.com/sstephenson/ruby-build)
-- [ruby](https://www.ruby-lang.org)
+- [ruby](http://www.ruby-lang.org)
 - [shellcheck](http://www.shellcheck.net)
-- [rubygems](https://rubygems.org)
+- [rubygems](http://rubygems.org)
 - [bundler](http://bundler.io)
 
 ### The `~/.mumm-ra.local` file
