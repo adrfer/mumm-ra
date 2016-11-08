@@ -32,7 +32,7 @@ By default, the script sets up:
 
 ### The `~/.mumm-ra.local` file
 
-Mumm-ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
+Mumm-Ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
 
 Here's an example:
 
