@@ -15,6 +15,12 @@ read -r -s -n1 -p 'When ready, press any key to continue...'
 echo
 echo
 
+# Fail fast if not on macOS
+if [[ "$(uname)" != 'Darwin' ]]; then
+  echo 'Ooops, this runs on macOS only.'
+  exit 1
+fi
+
 # Setting up Homebrew
 echo -n 'Setting up homebrew...'
 
