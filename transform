@@ -4,6 +4,12 @@
 # Get ready to turn you machine into an awesome development one.
 # Inspired by thoughtbot's awesome https://github.com/thoughtbot/laptop.
 
+# Fail fast if not on macOS
+if [[ "$(uname)" != 'Darwin' ]]; then
+  echo 'Ooops, this runs on macOS only.'
+  exit 1
+fi
+
 # The Incantation
 echo
 echo 'Ancient spirits of evil...'
@@ -14,12 +20,6 @@ echo
 read -r -s -n1 -p 'When ready, press any key to continue...'
 echo
 echo
-
-# Fail fast if not on macOS
-if [[ "$(uname)" != 'Darwin' ]]; then
-  echo 'Ooops, this runs on macOS only.'
-  exit 1
-fi
 
 # Setting up Homebrew
 echo -n 'Setting up homebrew...'
