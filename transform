@@ -99,11 +99,11 @@ done
 number_of_cores="$(sysctl -n hw.ncpu)"
 bundle config --global jobs "$((number_of_cores - 1))" >/dev/null 2>&1
 
-# Run customizations, if any
+# Source customizations, if any
 custom_file="${HOME}/.mumm-ra.local"
 
 if [[ -f "${custom_file}" ]]; then
-  echo "Now running your customizations from ${custom_file}..."
+  echo "Sourcing your customizations from ${custom_file}..."
   . "${custom_file}"
   echo ' done.'
 fi
