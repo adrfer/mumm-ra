@@ -47,8 +47,8 @@ jump() {
     echo 'Usage: jump PATH'
     return 1
   }
-
-  [[ -n "${1}" ]] && mkdir -p "${1}"
+  
+  mkdir -p "${1}"
   cd "${1}"
 }
 ```
