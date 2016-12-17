@@ -1,5 +1,5 @@
 # Mumm-Ra
-The script that transforms your decayed machine into an awesome development one.
+Transform your decayed machine into an awesome development one.
 
 Tested on `GNU bash 3.2.57` and `Git 2.8.4`.
 
