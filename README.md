@@ -34,24 +34,7 @@ By default, the script sets up:
 
 ### The `~/.mumm-ra.local` file
 
-Mumm-Ra runs `~/.mumm-ra.local` at the end, so put whatever customizations you might have there.
-
-Here's an example:
-
-```sh
-#!/usr/bin/env bash
-
-# Jump to existing directory or create it
-jump() {
-  [[ "${#}" = 1 ]] || {
-    echo 'Usage: jump PATH'
-    return 1
-  }
-  
-  [[ -n "${1}" ]] && mkdir -p "${1}"
-  cd "${1}"
-}
-```
+To further customize your setup, put whatever you need at the `~/.mumm-ra.local` file.
 
 --
 **Note:** Mumm-Ra wouldn't exist if it wasn't for awesome prior art. It's been inspired by thoughtbot's great [laptop](https://github.com/thoughtbot/laptop) project.
