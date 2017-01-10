@@ -1,7 +1,7 @@
 # Mumm-Ra
 Transform your decayed machine into an awesome development one.
 
-Tested against `GNU bash 3.2.57` and `Git 2.8.4`.
+Tested against `GNU bash 3.2.57` and `Git 2.10.1`.
 
 ## Usage
 
