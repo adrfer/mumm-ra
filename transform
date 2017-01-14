@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# This is the Mumm-Ra script!
-# Get ready to turn you machine into an awesome development one.
-# Inspired by thoughtbot's awesome https://github.com/thoughtbot/laptop.
-
 # Fail fast if not on macOS
 if [[ "$(uname)" != 'Darwin' ]]; then
   echo 'Ooops, this runs on macOS only.'
