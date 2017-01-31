@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-# Example of a customization file
+# For more info about mumm-ra, check the transform script:
+#
+#    https://github.com/adrfer/mumm-ra/blob/master/transform
+# 
+# /!\ Make your own customizations in here
