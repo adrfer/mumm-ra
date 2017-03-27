@@ -36,10 +36,10 @@ By default, the script sets up:
 
 To further customize your setup, put whatever you need at the `~/.mumm-ra.local` file. An example file is provided with this repository.
 
---
+##
 **Note:** Mumm-Ra wouldn't exist if it wasn't for awesome prior art. It's been inspired by thoughtbot's great [laptop](https://github.com/thoughtbot/laptop) project.
 
---
+##
 Hey, looking for some bash badassery? Check out [bash-oh-my](https://github.com/adrfer/bash-oh-my).
 
 Interested in tuning your git profile? Take a look at [git-oh-my](https://github.com/adrfer/git-oh-my).
